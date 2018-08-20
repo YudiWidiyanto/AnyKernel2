@@ -39,6 +39,8 @@ dump_boot;
 
 # begin ramdisk changes
 
+insert_line init.rc 'zpx' after 'import /init.\${ro.zygote}.rc' 'import /init.zpx.rc';
+
 # end ramdisk changes
 
 write_boot;

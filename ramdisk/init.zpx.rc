@@ -1,0 +1,30 @@
+# Zero ProjectX 
+# Inferno
+
+on late-fs
+    # boot time fs tune
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/scheduler cfq
+    write /sys/block/sda/queue/iosched/slice_idle 0
+    write /sys/block/sda/queue/nr_requests 256
+
+on property:sys.boot_completed=1
+    # set cpufreq
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+
+    # enable force fast charge
+    write /sys/kernel/fast_charge/force_fast_charge 1
+
+    # set LED
+    write /sys/class/leds/led:flash_1/max_brightness 0
+    write /sys/class/leds/led:torch_1/max_brightness 0
+    write /sys/class/leds/torch-light1/max_brightness 0
+    write /sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness 0
+
+    # set read-ahead
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/dm-0/queue/read_ahead_kb 128
+    write /sys/block/dm-1/queue/read_ahead_kb 128
+
+    # Set idle GPU
+    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 6
