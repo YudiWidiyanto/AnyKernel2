@@ -4,13 +4,13 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Ex-Kernel by yudiwdynto @ xda-developers
-do.devicecheck=0
+kernel.string=Semur Jengkol by yudiwdynto @ telegram
+do.devicecheck=1
 do.modules=1
 do.systemless=0
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=
+device.name1=ginkgo
 device.name2=
 device.name3=
 device.name4=
