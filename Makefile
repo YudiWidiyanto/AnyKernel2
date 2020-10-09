@@ -1,4 +1,4 @@
-NAME ?= $KERNEL_ZIP_NAME
+NAME ?= Sengkuni-Kernel-Ten
 
 DATE := $(shell date +'%d%m%Y')
 
