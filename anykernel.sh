@@ -4,18 +4,18 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Semur Jengkol by yudiwdynto @ telegram
+kernel.string=Zero ProjectX @ t.me/zpxupdate
 do.devicecheck=1
-do.modules=1
+do.modules=0
 do.systemless=0
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=ginkgo
-device.name2=
-device.name3=
-device.name4=
+device.name2=willow
+device.name3=Redmi Note 8
+device.name4=Redmi Note 8T
 device.name5=
-supported.versions=
+supported.versions=10
 supported.patchlevels=
 '; } # end properties
 
